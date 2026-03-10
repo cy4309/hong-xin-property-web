@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design Tokens */
+:root {
+  --color-primary: #c8a25a;
+  --color-deep: #0f1b2d;
+}
