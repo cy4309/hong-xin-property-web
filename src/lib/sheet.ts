@@ -43,7 +43,7 @@ export async function getNews(): Promise<NewsItem[]> {
     if (!res.ok) return [FALLBACK_ITEM];
     const data = await res.json();
     const items = Array.isArray(data) ? data : (data?.data ?? []);
-    return items.length > 0 ? items : [FALLBACK_ITEM];
+    return items.length > 0 ? [...items].reverse() : [FALLBACK_ITEM];
   } catch {
     return [FALLBACK_ITEM];
   }
